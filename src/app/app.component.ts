@@ -11,6 +11,10 @@ export class AppComponent {
     new Food(1, "Hamburger", "Didn't get a soda or cheese on my burger", 354),
     new Food(2, "Fries", "I only ate half of them",365)
   ];
+  selectedFood: Food = this.foods[0];
+  showDetails(clickedFood: Food) {
+    this.selectedFood = clickedFood;
+  }
 }
 export class Food {
   public done: boolean = false;

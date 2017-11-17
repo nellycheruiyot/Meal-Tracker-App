@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'My Meal Tracker';
+  // public foods: Food[] = [
+  //   new Food
+  // ]
 }

@@ -1,7 +1,8 @@
 <div class="container">
   <h1>{{title}}</h1>
+  <!-- <h3>Today's Food</h3> -->
   <div *ngFor="let currentFood of foods">
-    <h3>Meal Details</h3>
+    <h5 (click)="showDetails(currentFood)">Meal Number: {{currentFood.id}}</h5>
     <p>Name: {{currentFood.name}}</p>
     <p>Details: {{currentFood.details}}</p>
     <p>Calories: {{currentFood.calories}}</p>

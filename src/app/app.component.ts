@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Food } from './food.model';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'My Meal Tracker';
-  public foods: Food[] = [
+  public masterFoodList: Food[] = [
     new Food(1, "Hamburger", "Didn't get a soda or cheese on my burger", 354),
     new Food(2, "Fries", "I only ate half of them",365)
   ];
@@ -19,7 +20,7 @@ export class AppComponent {
     this.selectedFood = null;
   }
 }
-export class Food {
-  public done: boolean = false;
-  constructor(public id: number, public name: string, public details: string, public calories: number) {}
-}
+// export class Food {
+//   public done: boolean = false;
+//   constructor(public id: number, public name: string, public details: string, public calories: number) {}
+// }

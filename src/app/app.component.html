@@ -8,8 +8,15 @@
     <p>Calories: {{currentFood.calories}}</p>
     <button (click)="showDetails(currentFood)">Edit</button>
   </div> -->
-  <app-food-list></app-food-list>
-  <div *ngIf="selectedFood">
+  <app-food-list
+  [childFoodList]="masterFoodList"
+  (clickSender)="showDetails($event)"
+  ></app-food-list>
+  <app-edit-food
+    [childSelectedFood]="selectedFood"
+    (doneClickedSender)="finishedEditing()"
+  ></app-edit-food>
+  <!-- <div *ngIf="selectedFood">
     <h3>Edit a Meal</h3>
     <div>
       <label>Enter Meal Number:</label>
@@ -28,5 +35,5 @@
       <input [(ngModel)]="selectedFood.calories">
       <button (click)="finishedEditing()">Done</button>
     </div>
-  </div>
+  </div> -->
 </div>

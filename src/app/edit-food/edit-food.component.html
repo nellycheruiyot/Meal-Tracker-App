@@ -1,3 +1,20 @@
-<p>
-  edit-food works!
-</p>
+<div *ngIf="childSelectedFood">
+  <h3>Edit a Meal</h3>
+  <div>
+    <label>Enter Meal Number:</label>
+    <input [(ngModel)]="childSelectedFood.id">
+  </div>
+  <div>
+    <label>Enter Type of Food:</label>
+    <input [(ngModel)]="childSelectedFood.name">
+  </div>
+  <div>
+    <label>Enter Food Details:</label>
+    <input [(ngModel)]="childSelectedFood.details">
+  </div>
+  <div>
+    <label>Enter Calorie Count:</label>
+    <input [(ngModel)]="childSelectedFood.calories">
+    <button (click)="doneClicked()">Done</button>
+  </div>
+</div>

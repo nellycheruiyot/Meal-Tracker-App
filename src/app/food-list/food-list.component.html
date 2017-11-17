@@ -1,7 +1,7 @@
-<div *ngFor="let currentFood of foods">
+<div *ngFor="let currentFood of childFoodList">
   <h4>Meal Number: {{currentFood.id}}</h4>
   <p>Name: {{currentFood.name}}</p>
   <p>Details: {{currentFood.details}}</p>
   <p>Calories: {{currentFood.calories}}</p>
-  <button (click)="showDetails(currentFood)">Edit</button>
+  <button (click)="editButtonClicked(currentFood)">Edit</button>
 </div>

@@ -11,9 +11,12 @@ export class AppComponent {
     new Food(1, "Hamburger", "Didn't get a soda or cheese on my burger", 354),
     new Food(2, "Fries", "I only ate half of them",365)
   ];
-  selectedFood: Food = this.foods[0];
+  selectedFood: Food = null;
   showDetails(clickedFood: Food) {
     this.selectedFood = clickedFood;
+  }
+  finishedEditing() {
+    this.selectedFood = null;
   }
 }
 export class Food {

@@ -2,14 +2,14 @@
   <h1>{{title}}</h1>
   <!-- <h3>Today's Food</h3> -->
   <div *ngFor="let currentFood of foods">
-    <!-- <h5 (click)="showDetails(currentFood)">Meal Number: {{currentFood.id}}</h5>
-    <p>Name: {{currentFood.name}}</p>
-    <p>Details: {{currentFood.details}}</p>
-    <p>Calories: {{currentFood.calories}}</p> -->
-    <h5 (click)="showDetails(currentFood)">Meal Number: {{currentFood.id}}</h5>
+    <h4>Meal Number: {{currentFood.id}}</h4>
     <p>Name: {{currentFood.name}}</p>
     <p>Details: {{currentFood.details}}</p>
     <p>Calories: {{currentFood.calories}}</p>
+    <button (click)="showDetails(currentFood)">Edit</button>
+  </div>
+  <div *ngIf="selectedFood">
+    <h3>Edit a Meal</h3>
     <div>
       <label>Enter Meal Number:</label>
       <input [(ngModel)]="selectedFood.id">
@@ -25,7 +25,7 @@
     <div>
       <label>Enter Calorie Count:</label>
       <input [(ngModel)]="selectedFood.calories">
+      <button (click)="finishedEditing()">Done</button>
     </div>
-
   </div>
 </div>

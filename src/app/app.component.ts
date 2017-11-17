@@ -9,8 +9,8 @@ import { Food } from './food.model';
 export class AppComponent {
   title = 'My Meal Tracker';
   public masterFoodList: Food[] = [
-    new Food(1, "Hamburger", "Didn't get a soda or cheese on my burger", 354),
-    new Food(2, "Fries", "I only ate half of them",365)
+    // new Food(1, "Hamburger", "Didn't get a soda or cheese on my burger", 354),
+    // new Food(2, "Fries", "I only ate half of them",365)
   ];
   selectedFood: Food = null;
   showDetails(clickedFood: Food) {

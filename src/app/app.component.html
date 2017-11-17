@@ -1,6 +1,6 @@
 <div class="container">
   <h1>{{title}}</h1>
-  <!-- <h3>Today's Food</h3> -->
+  <h2>My Meal Intake</h2> <h2>Today's Date:</h2>
   <!-- <div *ngFor="let currentFood of foods">
     <h4>Meal Number: {{currentFood.id}}</h4>
     <p>Name: {{currentFood.name}}</p>
@@ -16,6 +16,9 @@
     [childSelectedFood]="selectedFood"
     (doneClickedSender)="finishedEditing()"
   ></app-edit-food>
+  <app-new-food
+    (newFoodSender)="addFood($event)"
+  ></app-new-food>
   <!-- <div *ngIf="selectedFood">
     <h3>Edit a Meal</h3>
     <div>

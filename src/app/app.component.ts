@@ -19,6 +19,9 @@ export class AppComponent {
   finishedEditing() {
     this.selectedFood = null;
   }
+  addFood(newFoodFromChild: Food) {
+    this.masterFoodList.push(newFoodFromChild)
+  }
 }
 // export class Food {
 //   public done: boolean = false;

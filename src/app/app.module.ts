@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { FoodListComponent } from './food-list/food-list.component';
 import { EditFoodComponent } from './edit-food/edit-food.component';
 import { NewFoodComponent } from './new-food/new-food.component';
+import { CaloriesPipe } from './calories.pipe';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { NewFoodComponent } from './new-food/new-food.component';
     AppComponent,
     FoodListComponent,
     EditFoodComponent,
-    NewFoodComponent
+    NewFoodComponent,
+    CaloriesPipe
   ],
   imports: [
     BrowserModule,

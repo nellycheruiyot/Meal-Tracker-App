@@ -1,13 +1,6 @@
 <div class="container">
   <h1>{{title}}</h1>
   <h2>My Meal Intake</h2> <h2>Today's Date:</h2>
-  <!-- <div *ngFor="let currentFood of foods">
-    <h4>Meal Number: {{currentFood.id}}</h4>
-    <p>Name: {{currentFood.name}}</p>
-    <p>Details: {{currentFood.details}}</p>
-    <p>Calories: {{currentFood.calories}}</p>
-    <button (click)="showDetails(currentFood)">Edit</button>
-  </div> -->
   <app-food-list
   [childFoodList]="masterFoodList"
   (clickSender)="showDetails($event)"
@@ -19,24 +12,4 @@
   <app-new-food
     (newFoodSender)="addFood($event)"
   ></app-new-food>
-  <!-- <div *ngIf="selectedFood">
-    <h3>Edit a Meal</h3>
-    <div>
-      <label>Enter Meal Number:</label>
-      <input [(ngModel)]="selectedFood.id">
-    </div>
-    <div>
-      <label>Enter Type of Food:</label>
-      <input [(ngModel)]="selectedFood.name">
-    </div>
-    <div>
-      <label>Enter Food Details:</label>
-      <input [(ngModel)]="selectedFood.details">
-    </div>
-    <div>
-      <label>Enter Calorie Count:</label>
-      <input [(ngModel)]="selectedFood.calories">
-      <button (click)="finishedEditing()">Done</button>
-    </div>
-  </div> -->
 </div>

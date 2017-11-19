@@ -17,6 +17,11 @@ export class FoodListComponent implements OnInit {
     this.clickSender.emit(foodToEdit);
   }
 
+  public selectedCalorieCount: string = "all";
+  onChange(optionFromMenu) {
+    this.selectedCalorieCount = optionFromMenu;
+  }
+
   constructor() { }
 
   ngOnInit() {

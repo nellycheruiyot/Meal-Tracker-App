@@ -1,18 +1,18 @@
 <h4>Log(Add) a Meal</h4>
 <div>
-  <label>Enter Meal Number:</label>
+  <label>Meal Number:</label>
   <input #newNumber>
 </div>
 <div>
-  <label>Enter Type of Food/Name:</label>
+  <label>Name:</label>
   <input #newName>
 </div>
 <div>
-  <label>Enter Food Details:</label>
+  <label>Food Details:</label>
   <input #newDetails>
 </div>
 <div>
-  <label>Enter Calorie Count:</label>
+  <label>Calories:</label>
   <input #newCalories>
   <button (click)="
   addClicked(newNumber.value, newName.value, newDetails.value, newCalories.value);

@@ -7,7 +7,7 @@ import { Food } from './food.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'My Meal Tracker';
+  title = 'Smart Meal Tracker';
   public masterFoodList: Food[] = [
   ];
   selectedFood: Food = null;

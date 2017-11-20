@@ -1,30 +1,33 @@
 <div class="container">
+<header class="jumbotron">
   <h1>{{title}}</h1>
-  <p>Smart Meal Tracker is an application that lets you log foods you’ve eaten each day, including details about the meal and its number of calories.</p>
-  <p>The user can: </p>
-  <ul>
-    <li>Log details of a meal (i.e number of meal, name, calories and details).</li>
-    <li>View and edit list of foods logged</li>
-    <li>Filter food for amount of calories (i.e whether calorie count is below or above 500)</li>
-  </ul>
-  <!-- <p>For Example:</p>
-  <p>Meal Number: 1</p>
-  <p>Name: Fries</p>
-  <p>Details: I only ate half of them.</p>
-  <p>Calories: 365</p> -->
-  <!-- <h2>My Meal Intake</h2>  -->
-  <!-- <h2>Date:</h2><input type="date"> -->
-  <!-- <button onclick="myFunction()">Date</button> -->
-
-  <app-food-list
-  [childFoodList]="masterFoodList"
-  (clickSender)="showDetails($event)"
-  ></app-food-list>
-  <app-edit-food
-    [childSelectedFood]="selectedFood"
-    (doneClickedSender)="finishedEditing()"
-  ></app-edit-food>
-  <app-new-food
-    (newFoodSender)="addFood($event)"
-  ></app-new-food>
+</header>
+<main>
+  <div class="about">
+    <p>Smart Meal Tracker is an application that lets you log foods you’ve eaten each day, including details about the meal and its number of calories.</p>
+    <p>The user can: </p>
+    <ul>
+      <li>Log details of a meal (i.e number of meal, name, calories and details).</li>
+      <li>View and edit list of foods logged</li>
+      <li>Filter food for amount of calories (i.e whether calorie count is below or above 500)</li>
+    </ul>
+  </div>
+  <div class="row">
+    <div class="column left">
+      <app-new-food
+        (newFoodSender)="addFood($event)"
+      ></app-new-food>
+    </div>
+    <div class="column right">
+      <app-food-list
+      [childFoodList]="masterFoodList"
+      (clickSender)="showDetails($event)"
+      ></app-food-list>
+      <app-edit-food
+        [childSelectedFood]="selectedFood"
+        (doneClickedSender)="finishedEditing()"
+      ></app-edit-food>
+    </div>
+  </div>
+</main>
 </div>

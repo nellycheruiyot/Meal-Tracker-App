@@ -9,8 +9,14 @@ import { Food } from '../food.model';
 export class FoodListComponent implements OnInit {
   @Input()childFoodList: Food[];
   @Output() clickSender = new EventEmitter();
+
   editButtonClicked(foodToEdit: Food) {
     this.clickSender.emit(foodToEdit);
+  }
+
+  @Output() deleteFood = new EventEmitter();
+  deleteFoodItem(foodToDelete: Food) {
+    this.deleteFood.emit(foodToDelete);
   }
 
   public selectedCalorieCount: string = "all";

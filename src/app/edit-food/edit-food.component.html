@@ -2,7 +2,7 @@
   <h3>Edit a Meal</h3>
   <div>
     <label>Enter Meal Number:</label>
-    <input [(ngModel)]="childSelectedFood.id">
+    <input type="number" [(ngModel)]="childSelectedFood.id">
   </div>
   <div>
     <label>Enter Type of Food:</label>
@@ -14,7 +14,7 @@
   </div>
   <div>
     <label>Enter Calorie Count:</label>
-    <input [(ngModel)]="childSelectedFood.calories">
+    <input type="number" [(ngModel)]="childSelectedFood.calories">
     <button (click)="doneClicked()">Done</button>
   </div>
 </div>

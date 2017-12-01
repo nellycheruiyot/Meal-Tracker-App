@@ -1,7 +1,7 @@
 <h2>Log (add) a meal</h2>
 <div>
   <label>Meal Number:</label>
-  <input #newNumber>
+  <input type="number" #newNumber>
 </div>
 <div>
   <label>Name:</label>
@@ -13,7 +13,7 @@
 </div>
 <div>
   <label>Calories:</label>
-  <input #newCalories>
+  <input type="number" #newCalories>
   <button (click)="
   addClicked(newNumber.value, newName.value, newDetails.value, newCalories.value);
   newNumber.value='';
